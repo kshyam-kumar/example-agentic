@@ -1,0 +1,150 @@
+PS C:\Users\PRIYA\OneDrive\Desktop\minikube-yaml_files> python -u "c:\Users\PRIYA\OneDrive\Desktop\minikube-yaml_files\claude_code.py"
+2025-05-21 07:46:36,687 - INFO - Starting pod monitor with AI integration (Ollama)
+2025-05-21 07:46:36,688 - INFO - Model: gemma:2b
+2025-05-21 07:46:43,304 - INFO - Scanning for unhealthy pods...
+2025-05-21 07:46:44,068 - INFO - Found unhealthy pod: default/crash-loop
+2025-05-21 07:46:50,587 - INFO - Analyzing pod default/crash-loop with Ollama
+
+================================================================================
+ISSUE DETECTED: Pod default/crash-loop
+Status: Waiting: CrashLoopBackOff - back-off 5m0s restarting failed container=looper pod=crash-loop_default(7a16586a-633d-41e1-9ff5-1bdf3a932f4d)
+--------------------------------------------------------------------------------
+POD LOGS:
+Crashing
+
+--------------------------------------------------------------------------------
+AI ANALYSIS:
+**1. Steps leading up to the error:**
+
+* The pod was scheduled to launch and run for 10 minutes.
+* It was assigned the default node.
+* The pod started successfully and completed the initialization process.
+
+**2. Error:**
+
+* The pod is stuck in the `CrashLoopBackOff` state.
+
+**3. Cause of the error:**
+
+The pod is stuck in the `CrashLoopBackOff` state because it is unable to launch a container because it is waiting for the node to be ready. This is because the node is not ready to receive traffic.
+
+**4. Steps to resolve the issue:**
+
+* Investigate the reason why the node is not ready.
+* Check the node logs for any errors or warnings.
+* Verify that the node meets the prerequisites for the pod.
+* If the node is not ready, consider increasing the `initialDelaySeconds` or `restartPolicy`.
+* If the node is ready, check the status of the container in the pod.
+* If the container is stuck, consider scaling the pod up to increase the number of replicas.
+================================================================================
+
+2025-05-21 07:47:37,666 - INFO - Found unhealthy pod: default/fail-command
+2025-05-21 07:47:44,293 - INFO - Analyzing pod default/fail-command with Ollama
+
+================================================================================
+ISSUE DETECTED: Pod default/fail-command
+Status: Waiting: CrashLoopBackOff - back-off 5m0s restarting failed container=bad-cmd pod=fail-command_default(26dc3b7c-4b49-45f8-8737-c0fa805e18cb)
+--------------------------------------------------------------------------------
+POD LOGS:
+No logs available
+--------------------------------------------------------------------------------
+AI ANALYSIS:
+**1. Steps occurred before the error:**
+
+* The pod was scheduled to start at **Tue, 13 May 2025 22:04:08 +0530**.
+* It was in a **waiting state** and had not started running yet.
+
+**2. Error:**
+
+* The pod is experiencing an **Error** with exit code **1**.
+* The error message indicates that the container encountered a **CrashLoopBackOff** error.
+
+**3. Cause of the error:**
+
+* The **CrashLoopBackOff** error is typically caused by a problem with the container's resources, such as memory or CPU limits being exceeded.  
+* The logs indicate that the pod was unable to allocate any resources to the container, leading to a deadlock situation.
+
+**4. Practical steps to resolve the issue:**
+
+* Check the resource requirements of the container and ensure that it has enough memory and CPU available.
+* Review the logs for any other error messages or warnings related to resource allocation.
+* Inspect the pod's configuration and ensure that it is running with the correct number of replicas.
+* If the issue persists, consider increasing the resource allocation or increasing the number of pods in the pod.
+* Investigate the root cause of the resource bottleneck and address it to prevent future occurrences.
+================================================================================
+
+2025-05-21 07:48:36,483 - INFO - Sleeping for 60 seconds...
+2025-05-21 07:49:36,484 - INFO - Scanning for unhealthy pods...
+2025-05-21 07:49:36,667 - INFO - Found unhealthy pod: default/crash-loop
+2025-05-21 07:49:43,112 - INFO - Analyzing pod default/crash-loop with Ollama
+
+================================================================================
+ISSUE DETECTED: Pod default/crash-loop
+Status: Waiting: CrashLoopBackOff - back-off 5m0s restarting failed container=looper pod=crash-loop_default(7a16586a-633d-41e1-9ff5-1bdf3a932f4d)
+--------------------------------------------------------------------------------
+POD LOGS:
+Crashing
+
+--------------------------------------------------------------------------------
+AI ANALYSIS:
+**1. Steps occurred before the error:**
+
+* The pod was scheduled to start at 22:04:40.
+* It was in a pending state, waiting to be scheduled.
+* The container was running the `looper` image.
+
+**2. Error:**
+
+* The pod crashed with the error message "Crashing".
+
+**3. Cause of the error:**
+
+* The error was caused by a crash loop in the container.
+* The `looper` image is known to have a bug that causes it to enter a crash loop under certain conditions.
+
+**4. Practical steps to resolve the issue:**
+
+* Check the logs of the container to see if there is any more information about the crash.
+* Identify the specific conditions that trigger the crash loop.
+* Fix the underlying issue in the `looper` image to prevent it from entering a crash loop.
+* If the bug is fixed in the `looper` image, consider creating a new image based on the patched image.
+* Alternatively, if it's not feasible to fix the image, you can try increasing the timeouts for the pod and container to prevent them from crashing.
+================================================================================
+
+2025-05-21 07:50:30,919 - INFO - Found unhealthy pod: default/fail-command
+2025-05-21 07:50:37,208 - INFO - Analyzing pod default/fail-command with Ollama
+
+================================================================================
+ISSUE DETECTED: Pod default/fail-command
+Status: Waiting: CrashLoopBackOff - back-off 5m0s restarting failed container=bad-cmd pod=fail-command_default(26dc3b7c-4b49-45f8-8737-c0fa805e18cb)
+--------------------------------------------------------------------------------
+POD LOGS:
+No logs available
+--------------------------------------------------------------------------------
+AI ANALYSIS:
+**1. Steps occurred before the error:**
+
+- The pod was scheduled to start on **Wed, 21 May 2025 07:49:03 +0530**.
+- The pod was in a **Ready** state with **89 containers ready to start**.
+- The pod was configured to run a command `sh -c exit 1` with **no environment variables**.
+
+**2. Error:**
+
+- The pod failed to start with the error message: **"Error"**.
+
+**3. Cause of the error:**
+
+- The error indicates an **unhandled exception** within the pod. The pod logs show the container exited with code 1, indicating an error.       
+
+**4. Practical steps to resolve the issue:**
+
+- Review the pod logs for any hints about the exception.
+- Check the container logs for any similar errors.
+- Verify that the container is running the correct command and that the required environment variables are set.
+- Check the node logs for any related errors or warnings.
+- Investigate the cause of the exception and address it accordingly.
+- Consider adding a crash handler to the container image to catch and handle exceptions during startup.
+================================================================================
+
+2025-05-21 07:51:24,402 - INFO - Sleeping for 60 seconds...
+2025-05-21 07:52:08,488 - INFO - Monitoring stopped by user.

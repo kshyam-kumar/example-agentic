@@ -1,0 +1,10 @@
+# fail-command.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fail-command
+spec:
+  containers:
+    - name: bad-cmd
+      image: busybox
+      command: ["sh", "-c", "exit 1"]

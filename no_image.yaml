@@ -1,0 +1,9 @@
+# fail-image.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fail-image
+spec:
+  containers:
+    - name: bad-container
+      image: nonexistent-image:latest

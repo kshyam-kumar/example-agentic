@@ -1,0 +1,40 @@
+2025-05-17 20:44:06,063 - INFO - Starting Kubernetes pod monitoring with Ollama integration
+2025-05-17 20:44:06,064 - INFO - Using AI model: gemma:2b
+2025-05-17 20:44:20,243 - ERROR - Failed to connect to Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=10)
+2025-05-17 20:44:28,171 - INFO - Running in OFFLINE mode. No AI analysis will be performed.
+2025-05-17 20:44:28,172 - INFO - Scanning for unhealthy pods...
+2025-05-17 20:44:28,729 - INFO - Found unhealthy pod: default/crash-loop
+2025-05-17 20:44:29,235 - INFO - Analysis complete. Logs saved to pod_logs\default_crash-loop_20250517_204429_logs.txt
+2025-05-17 20:44:29,236 - INFO - Pod description saved to pod_logs\default_crash-loop_20250517_204429_describe.txt
+2025-05-17 20:44:29,236 - INFO - Analysis saved to pod_logs\default_crash-loop_20250517_204429_analysis.txt
+2025-05-17 20:44:29,237 - INFO - Found unhealthy pod: default/fail-command
+2025-05-17 20:44:29,439 - WARNING - No logs available for pod default/fail-command
+2025-05-17 20:44:29,651 - INFO - Analysis complete. Logs saved to pod_logs\default_fail-command_20250517_204429_logs.txt
+2025-05-17 20:44:29,652 - INFO - Pod description saved to pod_logs\default_fail-command_20250517_204429_describe.txt
+2025-05-17 20:44:29,653 - INFO - Analysis saved to pod_logs\default_fail-command_20250517_204429_analysis.txt
+2025-05-17 20:44:29,655 - INFO - Sleeping for 60 seconds before next scan...
+2025-05-17 20:45:29,656 - INFO - Scanning for unhealthy pods...
+2025-05-17 20:45:29,842 - INFO - Found unhealthy pod: default/crash-loop
+2025-05-17 20:45:30,094 - INFO - Analysis complete. Logs saved to pod_logs\default_crash-loop_20250517_204530_logs.txt
+2025-05-17 20:45:30,094 - INFO - Pod description saved to pod_logs\default_crash-loop_20250517_204530_describe.txt
+2025-05-17 20:45:30,094 - INFO - Analysis saved to pod_logs\default_crash-loop_20250517_204530_analysis.txt
+2025-05-17 20:45:30,096 - INFO - Found unhealthy pod: default/fail-command
+2025-05-17 20:45:30,233 - WARNING - No logs available for pod default/fail-command
+2025-05-17 20:45:30,377 - INFO - Analysis complete. Logs saved to pod_logs\default_fail-command_20250517_204530_logs.txt
+2025-05-17 20:45:30,377 - INFO - Pod description saved to pod_logs\default_fail-command_20250517_204530_describe.txt
+2025-05-17 20:45:30,378 - INFO - Analysis saved to pod_logs\default_fail-command_20250517_204530_analysis.txt
+2025-05-17 20:45:30,380 - INFO - Sleeping for 60 seconds before next scan...
+2025-05-17 20:45:42,938 - INFO - Monitoring stopped by user
+2025-05-17 21:19:42,777 - INFO - Starting Kubernetes pod monitoring with Ollama integration
+2025-05-17 21:19:42,777 - INFO - Using AI model: gemma:2b
+2025-05-17 21:19:54,826 - WARNING - Couldn't connect to Ollama: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=10)
+2025-05-17 21:19:54,827 - INFO - Scanning for unhealthy pods...
+2025-05-17 21:19:55,261 - INFO - Found unhealthy pod: default/crash-loop
+2025-05-17 21:19:55,566 - INFO - Analyzing logs with Ollama for pod default/crash-loop
+2025-05-17 21:20:27,638 - ERROR - Error during Ollama analysis: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-05-17 21:20:27,643 - INFO - Analysis complete. Logs saved to pod_logs\default_crash-loop_20250517_212027_logs.txt
+2025-05-17 21:20:27,643 - INFO - Analysis saved to pod_logs\default_crash-loop_20250517_212027_analysis.txt
+2025-05-17 21:20:27,662 - INFO - Found unhealthy pod: default/fail-command
+2025-05-17 21:20:27,878 - WARNING - No logs available for pod default/fail-command
+2025-05-17 21:20:27,879 - INFO - Sleeping for 60 seconds before next scan...
+2025-05-17 21:20:54,084 - INFO - Monitoring stopped by user

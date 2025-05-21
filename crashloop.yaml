@@ -1,0 +1,10 @@
+# crashloop.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: crash-loop
+spec:
+  containers:
+    - name: looper
+      image: busybox
+      command: ["sh", "-c", "echo Crashing; sleep 1; exit 1"]
