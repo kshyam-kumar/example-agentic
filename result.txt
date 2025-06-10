@@ -1,0 +1,23 @@
+⚠️ Detected failed pod: crash-loop-deployment-6bb976dc85-s8g6n in namespace: default
+📌 Cause: Error pulling image 'busybox'
+📋 Recommended Action: revert_image
+📓 Details: Logs indicate an error during image pulling process.
+🔙 Action 'revert_image' not automated. Consider using 'kubectl rollout undo'.
+
+⚠️ Detected failed pod: fail-command-deployment-7f4fbd5744-rg94q in namespace: default
+📌 Cause: CrashLoopBackOff
+📋 Recommended Action: restart
+🔁 Restarting deployment: fail-command-deployment
+deployment.apps/fail-command-deployment restarted
+
+⚠️ Detected failed pod: fail-image-deployment-6884c54c4-gth25 in namespace: default
+📌 Cause: ImagePullBackOff: The container failed to pull the image
+📋 Recommended Action: revert_image
+📓 Details: The pod was unable to pull the image because the repository does not exist or requires authentication.
+🔙 Action 'revert_image' not automated. Consider using 'kubectl rollout undo'.
+
+⚠️ Detected failed pod: fail-image-deployment-75dd488c6b-4gs5d in namespace: default
+📌 Cause: ImagePullBackOff
+📋 Recommended Action: revert_image
+📓 Details: Error: ImagePullBackOff
+🔙 Action 'revert_image' not automated. Consider using 'kubectl rollout undo'.
